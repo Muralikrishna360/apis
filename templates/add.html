@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+    background-color:white;
+    }
+</style>
+<body>
+
+<div class="container">
+  <h2>Update user data here</h2>
+  <p>click on delete to remove and for editing click on edit data</p>
+  <form method="post" action="{% url 'add' %}">
+      {%csrf_token%}
+      <table class="table table-striped">
+        {{form.as_table}}
+                <tr>
+                    <td colspan="2">
+                        <button onclick="alert('saved successfully')">Submit</button>
+                    </td>
+                </tr>
+
+      </table>
+  </form>
+</div>
+<h1><a href="add">add one more</a><br><a href="dashboard">dashboard</a>></h1>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+    background-color:black;
+    }
+    h5{
+    color:white;
+    text-shadow:5px 2px 4px grey;
+    }
+   h1, h2{
+    color:white;
+    }
+    p{
+    color:grey;
+    }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">DOTworld</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">profile</a></li>
+      <li><a href="dashboard">Dashboard</a></li>
+      <li><a href="app1/add" >Add</a></li>
+      <li><a href="blog"><span class="glyphicon glyphicon-log-in"></span>Blog</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {% if user.is_authenticated %}
+         <li><a href="logout"><span class="glyphicon glyphicon-phone"></span>Logout</a></li>
+      {% else %}
+        <li><a href="register"><span class="glyphicon glyphicon-phone"></span> Sign Up</a></li>
+        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="blog"><span class="glyphicon glyphicon-log-in"></span>Blog</a></li>
+        <li><a href="login"><span class="glyphicon glyphicon-search"></span></a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+<div style="overflow: hidden;">
+  <svg
+    preserveAspectRatio="none"
+    viewBox="0 0 1200 120"
+    xmlns="http://www.w3.org/2000/svg"
+    style="fill: #f6f9f9; width: 124%; height: 472px;"
+  >
+    <path
+    d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+    opacity=".25"
+  />
+    <path
+      d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+      opacity=".5"
+    />
+    <path d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+  </svg>
+</div>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-4"><h1>Our Products</h1>
+     <p>Now, When you will click on the edit link then you will able to change the data of that item and redirect on update form.
+     </p>Till now we have completed our add and update functionality with the Django model form feature.<p> In the next section, we will create delete functionality.</p>
+     <p>Now, When you will click on the edit link then you will able to change the data of that item and redirect on update form.
+     </p>
+  </div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" ><h1>Upcoming Events</h1>
+    <div>
+      <div class="list-group">
+        <a href="events" class="list-group-item">
+          <h4 class="list-group-item-heading">Roboveeda events on jan 24</h4>
+          <p>Now, When you will click on the edit link then you will able to change the data of that item and redirect on update form.
+          </p>
+        </a>
+        <a href="events" class="list-group-item">
+          <h4 class="list-group-item-heading">Roboveeda events on jan 24</h4>
+          <p>Now, When you will click on the edit link then you will able to change the data of that item and redirect on update form.
+          </p>
+        </a>
+        <a href="events" class="list-group-item">
+          <h4 class="list-group-item-heading">Roboveeda events on jan 24</h4>
+          <p>Now, When you will click on the edit link then you will able to change the data of that item and redirect on update form.
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

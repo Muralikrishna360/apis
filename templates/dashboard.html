@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  body{
+  background-color:yellow;
+  }
+</style>
+<body>
+
+<div class="container">
+  <h2>Database</h2>
+  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>
+  <div class="table-responsive"><h1><span><a class="glyphicon glyphicon-home" href="/"></a></span></h1>
+    {% csrf_token %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>title</th>
+        <th>status</th>
+        <th>department</th>
+        <th>context</th>
+        <th>description</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.status}}</td>
+        <td>{{item.department}}</td>
+        <td>{{item.context}}</td>
+        <td>{{item.description}}</td>
+
+        <td>
+                    <a href="update/{{item.id}}">Edit</a>
+                    |
+                    <a onclick="return confirm('Are you sure to delete this code?')" href="delete/{{item.id}}">delete</a>
+                    |
+                     <a href="https://mail.google.com/mail/u/0/#inbox">Reply</a>
+        </td>
+
+
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <h4>Total {{count}} members in database</h4>
+  <hr>
+  <h5><a href="add">add customers</a></h5>
+</div>
+
+</body>
+</html>
